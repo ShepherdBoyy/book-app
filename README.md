@@ -1,47 +1,56 @@
-# Laravel Books & Authors Management App
+# 📚 Laravel Books & Authors Management App
 
-A simple Laravel 12 application for managing books and authors, with CRUD functionality, validation, responsive UI, and AJAX enhancements.
+A simple Laravel 12 application that manages a list of books and their authors. This app supports full CRUD functionality, input validation, search filtering, responsive UI, AJAX-powered interactions, and sample seeded data.
 
 ---
 
 ## ⚙️ Requirements
 
+Make sure the following tools are installed:
+
 -   PHP >= 8.1
 -   Composer
--   Node.js + NPM (for frontend)
 -   Laravel 12
--   SQLite (used for simplicity)
+-   Node.js + NPM
+-   SQLite
 
 ---
 
 ## 🚀 Setup Instructions
 
+Follow these steps to run the project locally:
+
 ```bash
-# Clone repository
+# 1. Clone the repository
 git clone https://github.com/ShepherdBoyy/book-app.git
 cd book-app
 
-# Install dependencies
+# 2. Install PHP dependencies
 composer install
+
+# 3. Install frontend dependencies and compile assets
 npm install && npm run build
 
-# Create .env
+# 4. Create environment config
 cp .env.example .env
 
-# Set SQLite DB
+# 5. Create SQLite database file
 touch database/database.sqlite
-php artisan config:clear
 
-# Update .env to use SQLite
+# 6. Update the .env file
+# Inside .env, set the following:
 DB_CONNECTION=sqlite
 DB_DATABASE=database/database.sqlite
 
-# Generate app key
+# 7. Clear config cache
+php artisan config:clear
+
+# 8. Generate application key
 php artisan key:generate
 
-# Run migrations and seed data
+# 9. Run migrations and seeders
 php artisan migrate --seed
 
-# Serve the application
+# 10. Serve the application
 php artisan serve
 ```
