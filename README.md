@@ -4,17 +4,6 @@ A simple Laravel 12 application for managing books and authors, with CRUD functi
 
 ---
 
-## 🛠 Features
-
--   CRUD for Authors and Books
--   Validation on all forms
--   Search functionality for both modules
--   AJAX Create/Delete (no reload)
--   Responsive UI using Bootstrap
--   Factory and Seeder for sample data
-
----
-
 ## ⚙️ Requirements
 
 -   PHP >= 8.1
@@ -29,8 +18,8 @@ A simple Laravel 12 application for managing books and authors, with CRUD functi
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/ShepherdBoyy/book-app.git
+cd book-app
 
 # Install dependencies
 composer install
@@ -45,7 +34,7 @@ php artisan config:clear
 
 # Update .env to use SQLite
 DB_CONNECTION=sqlite
-DB_DATABASE=/absolute/path/to/database/database.sqlite
+DB_DATABASE=database/database.sqlite
 
 # Generate app key
 php artisan key:generate
