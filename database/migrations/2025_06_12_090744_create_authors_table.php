@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('authors', function (Blueprint $table) {
             $table->id();
-            $table->string('name'); // <- this must exist
+            $table->string('name');
             $table->date('birth_date');
             $table->timestamps();
         });
